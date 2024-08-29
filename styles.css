@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #ff5722;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 3em;
+    /* Adjust font size */
+    font-weight: bold;
+    /* Make text bold */
+    text-align: center;
+    /* Center align the text */
+    margin: 20px 0;
+    /* Margin around the text */
+    padding: 10px;
+    /* Padding around the text */
+    background: linear-gradient(45deg, #ff6f61, #ffcc00, #66ccff, #33cc33);
+    /* Gradient colors */
+    -webkit-background-clip: text;
+    /* Clip background to the text */
+    -webkit-text-fill-color: transparent;
+    /* Make text color transparent to show gradient */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Shadow effect for better readability */
+    border-bottom: 3px solid #ff6f61;
+    /* Border below the heading */
+    background-color: #fff;
+    /* Background color for the heading */
+}
+
+#searchInput {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+main {
+    padding: 20px;
+}
+
+#festivals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.festival-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.festival-card:hover {
+    transform: scale(1.05);
+}
+
+.festival-card h2 {
+    color: #ff5722;
+
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+
+    bottom: 0;
+    width: 100%;
+}
+
+/* Existing styles remain the same */
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    max-height: 80vh;
+    /* Set maximum height for the content */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+}
+
+/* Adjustments for mobile-first design */
+@media (max-width: 768px) {
+    .popup-content {
+        width: 95%;
+        max-height: 70vh;
+        /* Adjust for smaller screens */
+    }
+}
+
+.close-btn {
+    color: #333;
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ff5722;
+}
+
+#popup-description {
+    color: gray;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: cursive;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    #festivals {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .festival-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #searchInput {
+        width: 90%;
+    }
+}
